@@ -90,6 +90,19 @@ Todos os dados ficarão salvos na pasta `output/alvo.com/`.
 
 ---
 
+## 📦 Instalar Ferramentas
+
+Execute o script de instalação automática:
+
+```bash
+chmod +x install_tools.sh
+./install_tools.sh
+```
+
+Isso instalará todas as dependências e ferramentas necessárias.
+
+---
+
 ## 📑 Gerar Relatório Final
 
 ```bash
@@ -173,7 +186,7 @@ logging:
 ## 📡 Conecte-se com a HexaSec
 
 - 📸 Instagram: [@hexasec\_consultoria](https://www.instagram.com/hexasec_consultoria)
-- - 🌐 Projeto: VPSRecon by HexaSec
+- 📧- 🌐 Projeto: VPSRecon by HexaSec
 
 ---
 
