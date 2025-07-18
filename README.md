@@ -173,8 +173,7 @@ logging:
 ## 📡 Conecte-se com a HexaSec
 
 - 📸 Instagram: [@hexasec\_consultoria](https://www.instagram.com/hexasec_consultoria)
-- 📧 E-mail: [hexasec.consultoria@gmail.com](mailto\:hexasec.consultoria@gmail.com)
-- 🌐 Projeto: VPSRecon by HexaSec
+- - 🌐 Projeto: VPSRecon by HexaSec
 
 ---
 
