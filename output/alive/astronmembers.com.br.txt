@@ -1,0 +1,16 @@
+https://webchatapi.astronmembers.com.br
+https://mautic.astronmembers.com.br
+https://epages.astronmembers.com.br
+https://central.astronmembers.com.br
+https://tvapp.astronmembers.com.br
+https://api.astronmembers.com.br
+https://dns.astronmembers.com.br
+https://painel.astronmembers.com.br
+https://rocketchat.astronmembers.com.br
+https://docs.astronmembers.com.br
+https://import.astronmembers.com.br
+https://app.astronmembers.com.br
+https://app-api.astronmembers.com.br
+https://dnscloudfront.astronmembers.com.br
+https://webhooks.astronmembers.com.br
+https://removeusersplan.astronmembers.com.br

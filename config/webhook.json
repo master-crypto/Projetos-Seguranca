@@ -1,6 +1,10 @@
+### ✅ **config/webhook.json**
+
+Configuração de Webhook (Telegram).
+
+json
 {
-  "discord_webhook": "https://discord.com/api/webhooks/SEU_WEBHOOK",
-  "slack_webhook": "https://hooks.slack.com/services/SEU_WEBHOOK",
-  "telegram_bot_token": "BOT_TOKEN",
-  "telegram_chat_id": "CHAT_ID"
+    "telegram_bot_token":= "",
+    "telegram_chat_id":= ""
 }
+
