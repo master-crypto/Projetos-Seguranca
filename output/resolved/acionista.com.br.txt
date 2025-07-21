@@ -1,9 +1,0 @@
-pag.acionista.com.br
-clube.acionista.com.br
-lp.acionista.com.br
-teste.acionista.com.br
-www.acionista.com.br
-database.acionista.com.br
-www.database.acionista.com.br
-www.clube.acionista.com.br
-mkt.acionista.com.br
