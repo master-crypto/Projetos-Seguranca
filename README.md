@@ -10,9 +10,7 @@ O **VPSRecon** é uma estrutura modular projetada para automação de tarefas de
 
 Desenvolvido para rodar em VPS de alta performance, otimizando tempo e resultados.
 
----
-
-## 📁 Estrutura de Diretórios
+# 📁 Estrutura de Diretórios
 
 ├── output/ # Resultados das execuções
 │ ├── subdomains/ # Subdomínios encontrados
@@ -32,10 +30,6 @@ Desenvolvido para rodar em VPS de alta performance, otimizando tempo e resultado
 
 
 ## ⚙️ Instalação ##
-
----
-
-## ⚙️ Instalação
 
 ### Pré-requisitos
 
