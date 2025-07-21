@@ -14,7 +14,6 @@ Desenvolvido para rodar em VPS de alta performance, otimizando tempo e resultado
 
 ## 📁 Estrutura de Diretórios
 
-VPSRecon/
 ├── output/ # Resultados das execuções
 │ ├── subdomains/ # Subdomínios encontrados
 │ ├── resolved/ # Subdomínios resolvidos (DNS)
@@ -31,6 +30,11 @@ VPSRecon/
 ├── optimize_vps.sh # Script de otimização da VPS
 └── README.md # Documentação do projeto
 
+
+## ⚙️ Instalação ##
+
+---
+
 ## ⚙️ Instalação
 
 ### Pré-requisitos
@@ -45,11 +49,26 @@ VPSRecon/
 chmod +x install.sh optimize_vps.sh
 ./install.sh
 ./optimize_vps.sh
+
+
+
+### Pré-requisitos ##
+
+- VPS com **Ubuntu 22.04+**
+- Acesso **root** ou via **sudo**
+- Go instalado (`sudo apt install golang`)
+
+### Instalação completa
+
+bash chmod +x install.sh optimize_vps.sh
+
+./install.sh
+./optimize_vps.sh
+
 🚀 Como Usar
+
 Executar Reconhecimento
-bash
-Copiar
-Editar
+
 cd scripts
 go run recon.go alvo.com
 Os resultados serão salvos automaticamente na pasta output/.
@@ -67,12 +86,13 @@ Nuclei – Scans de vulnerabilidades
 
 Chromium – Captura de screenshots via automação
 
-🔗 Configuração de Webhook
+Configuração de Webhook
+
 Edite o arquivo:
 
-bash
 config/webhook.json
 
+Exemplo de configuração:
 
 {
   "discord_webhook": "https://discord.com/api/webhooks/SEU_WEBHOOK",
@@ -80,6 +100,7 @@ config/webhook.json
   "telegram_bot_token": "BOT_TOKEN",
   "telegram_chat_id": "CHAT_ID"
 }
+
 🧠 To-Do | Melhorias Futuras
 Integração com APIs de ASN e Shodan
 
@@ -99,6 +120,3 @@ Sinta-se livre para abrir issues ou enviar pull requests.
 Distribuído sob a Licença MIT.
 Veja o arquivo LICENSE para mais informações.
 
-📫 Contato
-🔗 LinkedIn: HexaSec
-Instagram : https://www.instagram.com/hexasec_consultoria
