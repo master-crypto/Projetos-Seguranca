@@ -31,12 +31,6 @@ VPSRecon/
 ├── optimize_vps.sh # Script de otimização da VPS
 └── README.md # Documentação do projeto
 
-yaml
-Copiar
-Editar
-
----
-
 ## ⚙️ Instalação
 
 ### Pré-requisitos
@@ -107,4 +101,4 @@ Veja o arquivo LICENSE para mais informações.
 
 📫 Contato
 🔗 LinkedIn: HexaSec
-
+Instagram : https://www.instagram.com/hexasec_consultoria
