@@ -1,196 +1,103 @@
-# 🛡️ VPSRecon - Reconhecimento Ofensivo Automatizado
+# VPSRecon 🚀
 
-**VPSRecon** é uma automação poderosa e modular para reconhecimento ofensivo, voltada para profissionais de **Bug Bounty**, **Red Team**, **CTFs** e **Pentest autorizado**. O projeto executa uma série de etapas com base nas melhores ferramentas open-source de segurança ofensiva e é totalmente otimizado para execução em ambientes VPS.
+Framework de Reconhecimento Automático para Bug Bounty e Pentest.
 
----
+## 📌 Sobre o Projeto
 
-## 🚀 Funcionalidades
+O **VPSRecon** é uma estrutura modular projetada para automação de tarefas de reconhecimento em segurança ofensiva, bug bounty e pentest. Ele permite desde a enumeração de subdomínios até varredura de portas, verificação de serviços ativos, crawling e identificação de vulnerabilidades.
 
-- ✅ Enumeração de subdomínios (Subfinder, Amass, Chaos, Assetfinder)
-- ✅ Resolução DNS com dnsx
-- ✅ Verificação de hosts vivos com httpx
-- ✅ Scan de portas com Naabu
-- ✅ Coleta de URLs com GAU, WaybackURLs e Katana
-- ✅ Extração e análise de JavaScript (getJS, LinkFinder)
-- ✅ Coleta de parâmetros e fuzzing
-- ✅ Testes de XSS, SSTI, SQLi, Log4j, secrets
-- ✅ Captura de screenshots com Gowitness
-- ✅ Geração de relatório automatizado (.md)
-- ✅ Log de erros com timestamp
+Desenvolvido para rodar em VPS de alta performance, otimizando tempo e resultados.
 
 ---
 
-## 🏗️ Estrutura de Diretórios
+## 📁 Estrutura de Diretórios
 
-Após a execução, o projeto gerará a seguinte estrutura:
-
-```
-output/
-└── alvo.com/
-    ├── subdomains/
-    │   ├── amass.txt
-    │   ├── assetfinder.txt
-    │   ├── chaos.txt
-    │   ├── subfinder.txt
-    │   └── all_subs.txt
-    ├── resolved/
-    │   └── resolved.txt
-    ├── alive/
-    │   └── alive.txt
-    ├── ports/
-    │   └── ports.txt
-    ├── urls/
-    │   ├── gau.txt
-    │   ├── wayback.txt
-    │   └── all_urls.txt
-    ├── js/
-    │   └── jsfiles.txt
-    ├── parameters/
-    │   └── params.txt
-    ├── screenshots/
-    │   └── *.png
-    ├── vulnerabilities/
-    │   ├── xss.txt
-    │   ├── ssti.txt
-    │   ├── secrets.txt
-    │   ├── log4j.txt
-    │   └── sqlmap.txt
-    ├── report.md
-    └── execution.log
-```
+VPSRecon/
+├── output/ # Resultados das execuções
+│ ├── subdomains/ # Subdomínios encontrados
+│ ├── resolved/ # Subdomínios resolvidos (DNS)
+│ ├── alive/ # Hosts ativos (HTTP/HTTPS)
+│ ├── ports/ # Varredura de portas
+│ ├── crawl/ # Dados de crawling
+│ ├── vulnerabilities/ # Relatórios de vulnerabilidades
+│ └── screenshots/ # Capturas de tela dos hosts
+├── config/ # Arquivos de configuração
+│ └── webhook.json # Webhooks (Discord, Slack, Telegram)
+├── scripts/ # Scripts e automações
+│ └── recon.go # Script principal em Go
+├── install.sh # Script de instalação de dependências
+├── optimize_vps.sh # Script de otimização da VPS
+└── README.md # Documentação do projeto
 
 ---
 
-## 💻 Requisitos Mínimos e Recomendados
+## ⚙️ Instalação
 
-### VPS Recomendada:
+### Pré-requisitos:
+- VPS com Ubuntu (recomendado 22.04 ou superior)
+- Acesso root ou sudo
 
-| Recurso | Recomendado        |
-| ------- | ------------------ |
-| CPU     | 8 vCores           |
-| RAM     | 24 GB              |
-| Disco   | SSD NVMe           |
-| Tráfego | 32 TB ou ilimitado |
-| SO      | Ubuntu 22.04+      |
-
-### Também suporta VPS com:
-
-- 2 GB, 4 GB, 8 GB, 16 GB de RAM (com ajustes nos módulos)
-
----
-
-## 🛠️ Como Usar
+### Instalação completa:
 
 ```bash
-chmod +x vpsrecon.sh
-./vpsrecon.sh alvo.com
-```
+chmod +x install.sh optimize_vps.sh
+./install.sh
+./optimize_vps.sh
+🚀 Como Usar
+Executar Reconhecimento:
+bash
+Copiar
+Editar
+cd scripts
+go run recon.go alvo.com
+Os resultados serão salvos automaticamente na pasta output/.
 
-Todos os dados ficarão salvos na pasta `output/alvo.com/`.
+🛠️ Ferramentas Integradas
 
----
+Subfinder – Enumeração de subdomínios
 
-## 📦 Instalar Ferramentas
+Httpx – Verificação de hosts ativos
 
-Execute o script de instalação automática:
+Naabu – Varredura de portas
 
-```bash
-chmod +x install_tools.sh
-./install_tools.sh
-```
+Nuclei – Scans de vulnerabilidades
 
-Isso instalará todas as dependências e ferramentas necessárias.
+Masscan – Scanner de portas ultra rápido
 
----
+Chromium – Captura de screenshots via automação
 
-## 📑 Gerar Relatório Final
+🔗 Configuração de Webhook
+Edite o arquivo:
 
-```bash
-python3 generate_report.py alvo.com
-```
+config/webhook.json
+Exemplo de configuração:
 
-Isso cria um `report.md` com os principais achados e erros.
+{
+    "discord_webhook": "https://discord.com/api/webhooks/SEU_WEBHOOK",
+    "slack_webhook": "https://hooks.slack.com/services/SEU_WEBHOOK",
+    "telegram_bot_token": "BOT_TOKEN",
+    "telegram_chat_id": "CHAT_ID"
+}
 
----
+🧠 To-Do | Melhorias Futuras
+ 
+Integração com APIs de ASN e Shodan
 
-## ⚙️ Arquivo de Configuração YAML (vpsrecon.yaml)
+ Coleta de JS e análise de endpoints
 
-```yaml
-project:
-  name: VPSRecon
-  version: 1.0
-  description: Reconhecimento ofensivo automatizado.
-  author: HexaSec Consultoria
+ Identificação de tokens e credenciais expostas
 
-vps:
-  recommended:
-    cpu: 8
-    ram: 24GB
-    storage: SSD NVMe
-    traffic: 32TB+
+ Integração com Burp Suite para scans automatizados
 
-structure:
-  base_output_dir: output/
-  subdirs:
-    - subdomains
-    - resolved
-    - alive
-    - ports
-    - urls
-    - js
-    - parameters
-    - vulnerabilities
-    - screenshots
-    - logs
+ Dashboard Web (em desenvolvimento)
 
-tools:
-  - name: subfinder
-    command: subfinder -d {domain} -all -silent
-    output: subdomains/subfinder.txt
-  - name: naabu
-    command: naabu -list {input} -silent -o {output}
-  - name: httpx
-    command: httpx -silent
-  - name: dalfox
-    command: dalfox file {input} --only-poc
-  - name: gowitness
-    command: gowitness file -f {input} -P screenshots
+🤝 Contribuições
+Contribuições são bem-vindas! Sinta-se livre para abrir issues ou enviar pull requests.
 
-report:
-  generate_with: python3 generate_report.py {domain}
-  output: report.md
+🛡️ Licença
+Distribuído sob a Licença MIT. Veja LICENSE para mais informações.
 
-logging:
-  execution_log: execution.log
-  error_capture: true
-```
+📫 Contato
+✉️ Email: seuemail@dominio.com
 
----
-
-## 📦 Tecnologias Utilizadas
-
-- Go Tools: Subfinder, Naabu, Httpx, DNSx, Katana
-- Recon: Amass, Assetfinder, Chaos, GAU, WaybackURLs
-- Vulnerabilidades: Dalfox, Xray, Log4j-scan, SQLMap, Paramspider
-- Captura: Gowitness
-- Scripts: Bash + Python (report)
-
----
-
-## ⚠️ Termos de Uso
-
-> Esta ferramenta é para fins educacionais e uso ético apenas. O uso em sistemas sem permissão é ilegal. Utilize apenas em alvos autorizados.
-
----
-
-## 📡 Conecte-se com a HexaSec
-
-- 📸 Instagram: [@hexasec\_consultoria](https://www.instagram.com/hexasec_consultoria)
-- 🌐 Projeto: VPSRecon by HexaSec
-
----
-
-## ⭐ Contribua
-
-Achou útil? Dê uma estrela ⭐ neste repositório e compartilhe! Sugestões de melhoria, issues e PRs são muito bem-vindos.
-
+🔗 LinkedIn: https://www.linkedin.com/in/fernando-nunes-coutinho/
