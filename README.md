@@ -98,6 +98,4 @@ Contribuições são bem-vindas! Sinta-se livre para abrir issues ou enviar pull
 Distribuído sob a Licença MIT. Veja LICENSE para mais informações.
 
 📫 Contato
-✉️ Email: seuemail@dominio.com
-
 🔗 LinkedIn: https://www.linkedin.com/in/fernando-nunes-coutinho/
